@@ -11,6 +11,7 @@ import math
 
 
 def parse_args() -> argparse.Namespace:
+    """Parse les arguments entrés nécéssaire au fonctionnement du script"""
     parser = argparse.ArgumentParser(description="Calculateur de volume pour cylindre -- ©2020, par Éthan Leduc")
     parser.add_argument('-r', '--rayon', type=float, metavar='R', required=True, help='Rayon du cylindre')
     parser.add_argument('-H', '--hauteur', type=float, metavar='H', required=True, help='Heuteur du cylindre')
@@ -22,6 +23,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def volume_cylindre(rayon: float, hauteur: float) -> float:
+    """Formule calculant le volume du cylindre"""
     return math.pi * (rayon ** 2) * hauteur
 
 
